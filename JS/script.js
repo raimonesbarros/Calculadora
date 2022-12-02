@@ -4,7 +4,7 @@ const number = document.querySelectorAll(".number");
 
 
 function number() {
-  
+  estou com bloqueio
 }
 
 number.addEventListner("click", number)
