@@ -29,17 +29,17 @@ h3{
   font-weight: normal;
 }
 
-#up, #down{
+#displayUp, #displayDown{
   text-align: end;
   padding: 2px;
   overflow-wrap: break-word;
 }
 
-#up{
+#displayUp{
   min-height: 1.6em;
 }
 
-#down{
+#displayDown{
   font-size: 50px;
   min-height: 1.3em;
 }
