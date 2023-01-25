@@ -1,63 +1,62 @@
 @charset "UTF-8";
 
 *{
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  box-sizing: border-box;
-  list-style: none;
+  margin          : 0;
+  padding         : 0;
+  font-size       : 16px;
+  box-sizing      : border-box;
+  list-style      : none;
 }
 
 body{
   background-color: #333;
-  font-family: monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family     : monospace;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  height          : 100vh;
 }
 
 #calc{
   background-color: #c3c3c3;
-  width: 400px;
-  height: 500px;
+  width           : 400px;
 }
 
 h3{
-   color: #999;
-  margin: 5px;
-  font-weight: normal;
+  color           : #999;
+  margin          : 5px;
+  font-weight     : normal;
 }
 
 #displayUp, #displayDown{
-  text-align: end;
-  padding: 2px;
-  overflow-wrap: break-word;
+  text-align      : end;
+  padding         : 2px;
+  overflow-wrap   : break-word;
 }
 
 #displayUp{
-  min-height: 1.6em;
+  min-height      : 1.6em;
 }
 
 #displayDown{
-  font-size: 50px;
-  min-height: 1.3em;
+  font-size       : 50px;
+  min-height      : 1.3em;
 }
 
 #keyboard{
-  display: grid;
+  display         : grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 3px;
-  margin: 3px;
+  gap             : 3px;
+  margin          : 3px;
 }
 
 li{
   background-color: #dbdbdb;
-  font-size: 2em;
-  height: 2.26em;
-  cursor: pointer;
-  text-align: center;
-  padding: 19% 0;
+  font-size       : 2em;
+  height          : 2.26em;
+  cursor          : pointer;
+  text-align      : center;
+  padding         : 19% 0;
 }
 
 .number{
@@ -70,8 +69,8 @@ li:hover{
 
 .equal{
   background-color: #75a5cb;
-  grid-column: span 2;
-  padding: 9% 0%;
+  grid-column     : span 2;
+  padding         : 9% 0%;
 }
 
 .equal:hover{
