@@ -1,35 +1,39 @@
-import { Controller } from "./Controller.js"
+// Import da classe Claculator
+import { Calculator } from "./Calculator.js"
 
-// Acessar o DOM 
-const dDown     = document.querySelector('#displayDown')
-const dUp       = document.querySelector('#displayUp')
-const number    = [...document.querySelectorAll('.number')]
-const operator  = [...document.querySelectorAll('.operator')]
-const equal     = document.querySelector('.equal')
-const del       = document.querySelector('.del')
-const c         = document.querySelector('.c')
-const clear     = document.querySelector('.clear')
+// Acesso ao DOM 
+const dDown    = document.querySelector('#displayDown')
+const dUp      = document.querySelector('#displayUp')
+const number   = document.querySelectorAll('.number')
+const operator = document.querySelectorAll('.operator')
+const equal    = document.querySelector('.equal')
+const del      = document.querySelector('.del')
+const c        = document.querySelector('.c')
+const clear    = document.querySelector('.clear')
 
-// Nova instancia da class importada Controller
-const controller = new Controller(dDown, dUp)
+// Nova instancia da class importada calculator
+const calculator = new Calculator(dDown, dUp)
 
-// Recebe o numero clicado
-number.map(n=>{
+// Recebe o número ou o ponto quando clicado
+number.forEach(n=>{
   n.addEventListener('click', evt=>{
     let num = evt.target.textContent
-    controller.addNumber(num)
+    // Envia a informação recebida para o classe
+    calculator.addNumber(num)
   })
 })
 
 // Recebe o operador clicado
-operator.map(o=>{
+operator.forEach(o=>{
   o.addEventListener('click', evt=>{
     let op = evt.target.textContent
-    controller.addOperator(op)
+    // Envia a informação recebida para o classe
+    calculator.addOperator(op)
   })
 })
 
-del.addEventListener('click', ()=>controller.delete())
-c.addEventListener('click', ()=>controller.clear())
-clear.addEventListener('click', ()=>controller.clearAll())
-equal.addEventListener('click', ()=>controller.equal())
+// Recebe as informações das funções extras
+del  .addEventListener('click', ()=>calculator.delete())
+c    .addEventListener('click', ()=>calculator.clear())
+clear.addEventListener('click', ()=>calculator.clearAll())
+equal.addEventListener('click', ()=>calculator.equal())
