@@ -27,7 +27,7 @@ export class Calculator{
       this.updateDisplay(this._current.replace('.', ','))  
     } else {
       
-      this.updateDisplay(this._current)
+      this.updateDisplay(Number(this._current).toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2}))
     }
   }
 
@@ -59,10 +59,10 @@ export class Calculator{
     }
 
     this._operator   = op
-    this._operation += this._current + op
+    this._operation += this._current + ' ' + op + ' '
     this._current    = ''
     // Pede atualização do display
-    this.updateDisplay(this._result)
+    this.updateDisplay(Number(this._result).toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2}))
   }
 
   // Opera os valores recebidos e retorna o resultado
@@ -102,13 +102,12 @@ export class Calculator{
     } else {
       return
     }
-    this._operation += this._current
+    this._operation += Number(this._current).toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2})
     // Pede atualização do display
     this.updateDisplay(this._result)
+    
     this._current    = ''
-    //this._operator   = ''
-    //this._result     = ''
-    this._operation  = this._result + this._operator
+    this._operation  = this._result.toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2}) + this._operator
   }
 
   // Apaga o ultimo número digitado
