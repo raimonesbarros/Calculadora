@@ -59,7 +59,7 @@ export class Calculator{
     }
 
     this._operator   = op
-    this._operation += this._current + ' ' + op + ' '
+    this._operation += this._current + op
     this._current    = ''
     // Pede atualização do display
     this.updateDisplay(Number(this._result).toLocaleString('pt-br', {style: 'decimal', maximumFractionDigits: 2}))
