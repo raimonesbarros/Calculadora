@@ -1,73 +1,28 @@
-// Import da classe Claculator
-import { Calculator } from "./Calculator.js"
+import { Calculator } from "./poo/model/Calculator.js";
+import { View } from "./poo/view/View.js";
 
-// Acesso ao DOM 
-const dDown    = document.querySelector('#displayDown')
-const dUp      = document.querySelector('#displayUp')
-const number   = document.querySelectorAll('.number')
-const operator = document.querySelectorAll('.operator')
-const equal    = document.querySelector('.equal')
-const del      = document.querySelector('.del')
-const c        = document.querySelector('.c')
-const clear    = document.querySelector('.clear')
+let calculator = new Calculator()
 
-// Nova instancia da class importada calculator
-const calculator = new Calculator(dDown, dUp)
+const inputs = document.querySelectorAll('li')
 
-// Recebe o número ou o ponto quando clicado
-number.forEach(n=>{
-  n.addEventListener('click', evt=>{
-    let num = evt.target.textContent
-    // Envia a informação recebida para o classe
-    calculator.addNumber(num)
+inputs.forEach(input => {
+  input.addEventListener('click', ()=>{
+    input.className=='number'   ? calculator.numbers(input.textContent):''
+    input.className=='operator' ? calculator.operators(input.textContent):''
+    input.className=='equal'    ? calculator.equal():''
+    input.className=='del'      ? calculator.delete():''
+    input.className=='c'        ? calculator.clear():''
+    input.className=='clear'    ? calculator.clearAll():''
+    
+    let view = new View(calculator.info())
+
+    if(input.className=='number' || input.className=='del' || input.className=='c'){
+      view.viewNumber()
+    }
+
+    if(input.className=='operator' || input.className=='equal' || input.className=='clear'){
+      view.viewResult()
+    }
+
   })
-})
-
-// Recebe o operador clicado
-operator.forEach(o=>{
-  o.addEventListener('click', evt=>{
-    let op = evt.target.textContent
-    // Envia a informação recebida para o classe
-    calculator.addOperator(op)
-  })
-})
-
-// Recebe as informações das funções extras
-del  .addEventListener('click',()=>calculator.delete  ())
-c    .addEventListener('click',()=>calculator.clear   ())
-clear.addEventListener('click',()=>calculator.clearAll())
-equal.addEventListener('click',()=>calculator.equal   ())
-
-// Recebe entradas do teclado
-document.addEventListener('keyup', evt=>{
-
-  // Entradas numéricas
-  if(evt.key >=0){
-    calculator.addNumber(evt.key)
-  }
-  // Outras entradas
-  switch (evt.key) {
-    case        '.' : calculator.addNumber(evt.key)
-      break;
-    case        ',' : calculator.addNumber('.')
-      break;
-    case        '+' : calculator.addOperator(evt.key)
-    break;
-    case        '-' : calculator.addOperator(evt.key)
-      break;
-    case        '*' : calculator.addOperator('x')
-      break;
-    case        '/' : calculator.addOperator('÷')
-      break;
-    case    'Enter' : calculator.equal()
-      break;
-    case 'Backspace': calculator.delete()
-      break;
-    case   'Delete' : calculator.clear()
-      break;
-    case   'Escape' : calculator.clearAll()
-      break;
-    default         : ''
-      break;
-  }
-})
+});
