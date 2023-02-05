@@ -6,7 +6,7 @@
 ## 🛠 Recursos:
 - ### Página única
 
-![](img/init.jpg)
+![](img/init1.jpg)
 
 Display duplo;
 

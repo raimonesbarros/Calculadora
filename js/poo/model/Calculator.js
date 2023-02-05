@@ -40,7 +40,7 @@ export class Calculator{
     this.toOperate()
 
     if(this.currentValue){
-      this.operation += Number(this.currentValue).toLocaleString('pt-BR', {style: 'decimal'}) + operator
+      this.operation += Number(this.currentValue).toLocaleString('pt-BR', {style: 'decimal'}) + ' ' + operator + ' '
     } else{
       this.operation += operator
     }
