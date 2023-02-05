@@ -73,7 +73,9 @@ export class Calculator{
 
     this.toOperate()
 
-    this.operation += Number(this.currentValue).toLocaleString('pt-BR', {style: 'decimal'})
+    if(this.currentValue){
+      this.operation += Number(this.currentValue).toLocaleString('pt-BR', {style: 'decimal'})
+    }
     this.currentValue = ''
   }
 
