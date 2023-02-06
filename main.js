@@ -1,5 +1,5 @@
-import { Calculator } from './poo/model/Calculator.js'
-import { View } from './poo/view/View.js'
+import { Calculator } from './js/poo/model/Calculator.js'
+import { View } from './js/poo/view/View.js'
 
 let calculator = new Calculator()
 
