@@ -3,6 +3,7 @@
 ## A famosa calculadora do desenvolvedor aprendiz!
 
 ----
+
 ## 🛠 Recursos:
 - ### Página única
 
