@@ -1,6 +1,6 @@
 # 🔢 Calculadora
 
-## A famosa calculadora do desenvolvedor aprendiz!
+## A famosa calculadora do desenvolvedor aprendiz
 
 ----
 
