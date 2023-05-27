@@ -1,4 +1,4 @@
-# 🔢 Calculadora
+# 🔢 Calculadora :challenge
 
 ## A famosa calculadora do desenvolvedor aprendiz
 
@@ -29,10 +29,10 @@ Apagar tudo e reiniciar.
 <br>
 <div align="center">
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
   com foco em:
-  
+
   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 </div>
@@ -43,9 +43,15 @@ Apagar tudo e reiniciar.
 - ### Simples, inspirada na calculadora do Windows 10.
 
 ----
+
+## Legenda
+:challenge - Projeto realizado a partir de um modelo
+
+----
+
 <br>
 <div align='center'>
-<a href="https://raimonesbarros.github.io/Calculadora/"><button style='padding:.5em; background-color:skyblue; border-radius:.5em; font-weight:bold'> 📤 Acessar Deploy 📤 </button> </a>
+<a href="https://raimonesbarros.github.io/Calculadora/"><button style='padding:.5em; background-color:skyblue; border-radius:.5em; font-weight:bold'> 📤 Usar a calculadora 📤 </button> </a>
 
 <br>
 
